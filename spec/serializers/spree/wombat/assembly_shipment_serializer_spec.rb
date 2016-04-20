@@ -1,4 +1,5 @@
-module Spree
+if defined?(Spree::Wombat)
+  module Spree
   module Wombat
     describe AssemblyShipmentSerializer do
       let(:order) { Order.create }
@@ -27,5 +28,6 @@ module Spree
         end
       end
     end
+  end
   end
 end
